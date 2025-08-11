@@ -11,8 +11,9 @@ crypto_px['Close'][univ].plot(figsize=(10,6))
 plt.title('Cryptocurrencies Price History')
 plt.xlabel('Date')
 plt.ylabel('Price (USD)')
-# plt.show()
+plt.show()
 
+# Calculate different cryptocurrencies' montly returns
 monthly_returns = crypto_px.resample('ME').ffill().pct_change()
 print(monthly_returns)
 
